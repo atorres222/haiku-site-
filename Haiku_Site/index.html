@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Poppy Blooms</title>
+  <style>
+    :root {
+      --paper: #f5efe7;
+      --ink: #2d211d;
+      --accent: #a14d35;
+      --shadow: rgba(45, 33, 29, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #fffaf3 0%, var(--paper) 40%, #eadcc4 100%);
+      color: var(--ink);
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .page {
+      width: min(90vw, 760px);
+      padding: 3rem 2.5rem 2.5rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.28);
+      border: 1px solid rgba(45, 33, 29, 0.15);
+      border-radius: 18px;
+      box-shadow: 0 24px 60px var(--shadow);
+      backdrop-filter: blur(2px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .author {
+      margin: 0.8rem 0 2.2rem;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(45, 33, 29, 0.75);
+    }
+
+    .haiku {
+      margin: 0 auto;
+      max-width: 460px;
+      font-size: clamp(1.25rem, 2vw, 1.8rem);
+      line-height: 1.9;
+    }
+
+    .haiku p {
+      margin: 0;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+
+    .haiku .third {
+      margin-top: 0.5rem;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .art {
+      margin: 2rem auto 0;
+      width: min(100%, 420px);
+    }
+
+    .art img {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(45, 33, 29, 0.15);
+      box-shadow: 0 18px 34px rgba(45, 33, 29, 0.12);
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 2.25rem 1.25rem 2rem;
+      }
+
+      .author {
+        letter-spacing: 0.08em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>A Poppy Blooms</h1>
+    <p class="author">by Katsushika Hokusai</p>
+
+    <figure class="art">
+      <img src="img/Haiku_Image.jpg" alt="A stylized poppy bloom in a Japanese-inspired scene">
+    </figure>
+
+    <div class="haiku">
+      <p>I write, erase, rewrite</p>
+      <p>Erase again, and then</p>
+      <p class="third">A poppy blooms.</p>
+    </div>
+  </main>
+</body>
+</html>
